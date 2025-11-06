@@ -1,9 +1,12 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import FloralDecoration from './FloralDecoration'
 import InteractiveIcon from './InteractiveIcon'
 import HeartIcon from './HeartIcon'
+import MapModal from './MapModal'
 
 const WeddingInvitation = () => {
+  const [isMapOpen, setIsMapOpen] = useState(false)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -182,7 +185,7 @@ const WeddingInvitation = () => {
             <InteractiveIcon
               iconType="location"
               label="Como chegar"
-              onClick={() => console.log('Como chegar')}
+              onClick={() => setIsMapOpen(true)}
             />
             <InteractiveIcon
               iconType="check"
@@ -197,6 +200,9 @@ const WeddingInvitation = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Map Modal */}
+      <MapModal isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} />
     </motion.div>
   )
 }

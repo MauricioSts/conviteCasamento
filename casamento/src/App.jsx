@@ -11,7 +11,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-0 md:p-4 relative overflow-hidden">
+    <div className="fixed inset-0 w-full h-full bg-white overflow-hidden">
       <AnimatePresence mode="wait">
         {!showInvitation ? (
           <EnvelopeAnimation key="envelope" onOpen={handleEnvelopeOpen} />
@@ -22,7 +22,7 @@ function App() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-full"
+            className="w-full h-full"
           >
             <WeddingInvitation />
           </motion.div>
