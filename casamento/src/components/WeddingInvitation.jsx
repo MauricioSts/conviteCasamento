@@ -81,12 +81,12 @@ const WeddingInvitation = () => {
                 </span>
                 {/* Red heart at the position indicated by the arrow */}
                 <motion.div
-                  className="absolute top-[15%] right-[1%] left-[110%]"
+                  className="absolute top-[13%] -right-8 md:-right-12"
                   initial={{ scale: 0, rotate: -180 }}
                   animate={{ scale: 1, rotate: 0 }}
                   transition={{ delay: 0.8, type: 'spring', stiffness: 200 }}
                 >
-                  <HeartIcon className="w-8 h-8 text-wedding-rose" />
+                  <HeartIcon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-wedding-rose" />
                 </motion.div>
               </div>
             </div>
