@@ -28,15 +28,15 @@ const EnvelopeAnimation = ({ onOpen }) => {
       
       {/* Rose blur at center - responsive */}
       <div 
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-rose-300 opacity-30 blur-3xl z-0"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full bg-rose-300 opacity-30 blur-3xl z-0"
         style={{
-          filter: 'blur(60px)'
+          filter: 'blur(40px)'
         }}
       />
       
       {/* Toque para abrir text - responsive */}
       <motion.p
-        className="absolute bottom-16 md:bottom-20 left-4 md:left-8 text-black text-sm md:text-base font-medium z-10"
+        className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-3 sm:left-4 md:left-8 text-black text-xs sm:text-sm md:text-base font-medium z-10"
         style={{
           fontFamily: 'Georgia, serif',
           fontStyle: 'italic',
