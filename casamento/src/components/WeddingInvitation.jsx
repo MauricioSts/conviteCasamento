@@ -29,34 +29,34 @@ const WeddingInvitation = () => {
 
   return (
     <motion.div
-      className="relative w-full max-w-[430px] mx-auto bg-white min-h-screen flex flex-col overflow-hidden"
-      style={{ width: '100%', maxWidth: '430px', height: '932px' }}
+      className="relative w-full max-w-[430px] mx-auto bg-white min-h-screen md:min-h-0 md:h-auto md:my-8 md:rounded-lg md:shadow-lg flex flex-col overflow-y-auto"
+      style={{ width: '100%', maxWidth: '430px' }}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       {/* Top Floral Decoration - Top Right */}
-      <div className="absolute -top-8 -right-8 w-56 h-56 opacity-70 z-0">
+      <div className="absolute -top-8 -right-8 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 opacity-70 z-0">
         <FloralDecoration imageType="arranjo1" />
       </div>
 
       {/* Top Floral Decoration - Top Left (inverted) */}
-      <div className="absolute -top-8 -left-8 w-56 h-56 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
+      <div className="absolute -top-8 -left-8 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
         <FloralDecoration imageType="arranjo1" />
       </div>
 
       {/* Bottom Floral Decoration - Bottom Left */}
-      <div className="absolute -bottom-8 -left-8 w-48 h-48 opacity-70 z-0">
+      <div className="absolute -bottom-8 -left-8 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-70 z-0">
         <FloralDecoration imageType="arranjo2" />
       </div>
 
       {/* Bottom Floral Decoration - Bottom Right (inverted) */}
-      <div className="absolute -bottom-8 -right-8 w-48 h-48 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
+      <div className="absolute -bottom-8 -right-8 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
         <FloralDecoration imageType="arranjo2" />
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col items-center justify-start h-full px-4 pt-16 pb-6">
+      <div className="relative z-10 flex flex-col items-center justify-start min-h-full px-4 pt-16 pb-6">
         {/* Blessing Text */}
         <motion.div
           className="text-center mb-4 mt-4"
@@ -76,7 +76,7 @@ const WeddingInvitation = () => {
             {/* Large translucent ampersand in background with heart */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
               <div className="relative">
-                <span className="font-cursive text-[16rem] text-soft-gray font-light leading-none opacity-100" style={{ color: '#E8E8E8' }}>
+                <span className="font-cursive text-[10rem] sm:text-[12rem] md:text-[16rem] text-soft-gray font-light leading-none opacity-100" style={{ color: '#E8E8E8' }}>
                   &
                 </span>
                 {/* Red heart at the position indicated by the arrow */}
@@ -94,12 +94,12 @@ const WeddingInvitation = () => {
             {/* Names in elegant calligraphy */}
             <div className="relative z-10 flex flex-col items-center justify-center gap-2">
               {/* First name */}
-              <h1 className="ballet-font text-7xl text-wedding-gray leading-[1.1] tracking-tight -ml-12" style={{ color: '#4A4A4A', letterSpacing: '-0.02em' }}>
+              <h1 className="ballet-font text-5xl sm:text-6xl md:text-7xl text-wedding-gray leading-[1.1] tracking-tight -ml-8 md:-ml-12" style={{ color: '#4A4A4A', letterSpacing: '-0.02em' }}>
                 Andreza
               </h1>
 
               {/* Second name */}
-              <h1 className="ballet-font text-7xl text-wedding-gray leading-[1.1] tracking-tight ml-12" style={{ color: '#4A4A4A', letterSpacing: '-0.02em' }}>
+              <h1 className="ballet-font text-5xl sm:text-6xl md:text-7xl text-wedding-gray leading-[1.1] tracking-tight ml-8 md:ml-12" style={{ color: '#4A4A4A', letterSpacing: '-0.02em' }}>
                 Eduardo
               </h1>
             </div>

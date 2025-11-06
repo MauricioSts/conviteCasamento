@@ -8,7 +8,7 @@ const EnvelopeAnimation = ({ onOpen }) => {
 
   return (
     <motion.div 
-      className="absolute inset-0 w-full h-full bg-white cursor-pointer overflow-hidden relative"
+      className="absolute inset-0 w-full h-full bg-white cursor-pointer overflow-hidden relative flex items-center justify-center"
       onClick={handleClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -17,11 +17,8 @@ const EnvelopeAnimation = ({ onOpen }) => {
       <motion.img
         src={envelopeImage}
         alt="Envelope"
-        className="w-full h-full object-cover"
+        className="w-full h-full object-cover md:object-contain md:max-w-[600px] md:max-h-[90vh]"
         style={{ 
-          width: '100%', 
-          height: '100%', 
-          objectFit: 'cover',
           display: 'block'
         }}
         initial={{ scale: 0.95 }}
@@ -29,17 +26,17 @@ const EnvelopeAnimation = ({ onOpen }) => {
         transition={{ duration: 0.5, ease: "easeOut" }}
       />
       
-      {/* Rose blur at center */}
+      {/* Rose blur at center - responsive */}
       <div 
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full bg-rose-300 opacity-30 blur-3xl z-0"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full bg-rose-300 opacity-30 blur-3xl z-0"
         style={{
-          filter: 'blur(80px)'
+          filter: 'blur(60px)'
         }}
       />
       
-      {/* Toque para abrir text */}
+      {/* Toque para abrir text - responsive */}
       <motion.p
-        className="absolute bottom-20 left-8 text-black text-base font-medium z-10"
+        className="absolute bottom-16 md:bottom-20 left-4 md:left-8 text-black text-sm md:text-base font-medium z-10"
         style={{
           fontFamily: 'Georgia, serif',
           fontStyle: 'italic',
