@@ -8,7 +8,7 @@ const EnvelopeAnimation = ({ onOpen }) => {
 
   return (
     <motion.div 
-      className="absolute inset-0 w-full h-full bg-white cursor-pointer overflow-hidden relative flex items-center justify-center"
+      className="absolute inset-0 w-full h-full bg-white cursor-pointer overflow-hidden relative flex items-center justify-center max-w-full"
       onClick={handleClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

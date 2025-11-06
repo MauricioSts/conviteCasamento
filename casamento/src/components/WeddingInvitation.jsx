@@ -29,7 +29,7 @@ const WeddingInvitation = () => {
 
   return (
     <motion.div
-      className="relative w-full max-w-[430px] mx-auto bg-white min-h-screen md:min-h-0 md:h-auto md:my-8 md:rounded-lg md:shadow-lg flex flex-col overflow-y-auto"
+      className="relative w-full max-w-[430px] mx-auto bg-white min-h-screen md:min-h-0 md:h-auto md:my-8 md:rounded-lg md:shadow-lg flex flex-col overflow-y-auto overflow-x-hidden"
       style={{ width: '100%', maxWidth: '430px' }}
       variants={containerVariants}
       initial="hidden"
