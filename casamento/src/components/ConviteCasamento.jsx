@@ -30,101 +30,101 @@ export default function ConviteCasamento() {
       </div>
 
       {/* Bottom right floral decoration - mirrored */}
-      <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 opacity-80 z-0 drop-shadow-md" style={{ transform: 'scaleX(-1)' }}>
+      <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-80 z-0 drop-shadow-md" style={{ transform: 'scaleX(-1)' }}>
         <img src={arranjo2} alt="Arranjo floral" className="w-full h-full object-contain" />
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col items-center justify-center flex-1 py-8 space-y-4">
+      <div className="relative z-10 flex flex-col items-center justify-center flex-1 py-4 sm:py-6 md:py-8 lg:py-10 space-y-6 sm:space-y-7 md:space-y-8 lg:space-y-10 xl:space-y-12 pt-28 sm:pt-36 md:pt-48 lg:pt-60 xl:pt-72 pb-2 sm:pb-3 md:pb-4 lg:pb-5">
         
         {/* Biblical quote - top */}
-        <p className="text-xs italic text-gray-500 text-center mt-4 font-montserrat px-4">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl italic text-gray-500 text-center font-montserrat px-4 sm:px-6 md:px-8">
           "Para que todos vejam, saibam, considerem, e compreendam que a mão do Senhor fez isso." — Isaías 41:20
         </p>
 
         {/* Blessing */}
-        <p className="text-sm text-gray-600 text-center -mt-2 font-montserrat">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 text-center -mt-2 sm:-mt-3 md:-mt-4 font-montserrat">
           Com a bênção de Deus e de seus pais
         </p>
 
         {/* Names section */}
-        <div className="relative flex flex-col items-center justify-center w-full py-8 sm:py-12 min-h-[250px] sm:min-h-[300px]">
+        <div className="relative flex flex-col items-center justify-center w-full py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24 min-h-[240px] sm:min-h-[300px] md:min-h-[360px] lg:min-h-[420px] xl:min-h-[480px]">
           {/* Large translucent ampersand in background */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-            <span className="font-cursive text-[12rem] sm:text-[16rem] md:text-[20rem] leading-none" style={{ color: '#E8E8E8' }}>
+            <span className="font-cursive text-[12rem] sm:text-[16rem] md:text-[20rem] lg:text-[24rem] xl:text-[28rem] leading-none transform translate-x-12 sm:translate-x-16 md:translate-x-20 lg:translate-x-24 xl:translate-x-28" style={{ color: '#E8E8E8' }}>
               &
             </span>
           </div>
 
           {/* Names with ampersand in foreground */}
-          <div className="relative z-10 flex flex-col items-center justify-center gap-2">
+          <div className="relative z-10 flex flex-col items-center justify-center gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-10">
             {/* First name */}
-            <h1 className="font-cursive text-5xl sm:text-6xl md:text-7xl text-gray-700 font-semibold text-center" style={{ color: '#4A4A4A' }}>
+            <h1 className="font-cursive text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] text-gray-700 font-semibold text-center" style={{ color: '#4A4A4A' }}>
               Andreza
             </h1>
 
             {/* Small ampersand between names */}
-            <span className="font-cursive text-2xl sm:text-3xl md:text-4xl text-gray-600 font-light opacity-70" style={{ color: '#4A4A4A' }}>
+            <span className="font-cursive text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-gray-600 font-light opacity-70" style={{ color: '#4A4A4A' }}>
               &
             </span>
 
             {/* Second name */}
-            <h1 className="font-cursive text-5xl sm:text-6xl md:text-7xl text-gray-700 font-semibold text-center" style={{ color: '#4A4A4A' }}>
+            <h1 className="font-cursive text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[12rem] text-gray-700 font-semibold text-center" style={{ color: '#4A4A4A' }}>
               Eduardo
             </h1>
           </div>
 
           {/* Delicate heart on the large background ampersand */}
-          <div className="absolute top-[38%] left-1/2 transform -translate-x-1/2 z-20">
-            <HeartIcon className="w-4 h-4 sm:w-5 sm:h-5" style={{ color: '#F5AEB4' }} />
+          <div className="absolute top-[38%] left-1/2 transform translate-x-12 sm:translate-x-16 md:translate-x-20 lg:translate-x-24 xl:translate-x-28 z-20">
+            <HeartIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-12 xl:h-12" style={{ color: '#F5AEB4' }} />
           </div>
         </div>
 
         {/* Invitation text */}
-        <p className="text-gray-600 text-sm text-center uppercase tracking-wide font-montserrat px-4 mt-4">
+        <p className="text-gray-600 text-lg sm:text-xl md:text-2xl lg:text-3xl text-center uppercase tracking-wide font-montserrat px-4 sm:px-6 md:px-8">
           Convidam para cerimônia de seu<br />
           <span className="font-semibold">CASAMENTO</span> a realizar-se no dia:
         </p>
 
         {/* Date and time section */}
-        <div className="flex flex-col items-center justify-center mt-6 space-y-3">
+        <div className="flex flex-col items-center justify-center space-y-5 sm:space-y-6 md:space-y-7 lg:space-y-8 xl:space-y-10">
           {/* Decorative line with month */}
-          <div className="flex items-center justify-center gap-4 mt-4">
-            <div className="w-8 h-px" style={{ backgroundColor: '#D6B6A1' }}></div>
-            <span className="text-gray-600 text-xs uppercase tracking-wider font-montserrat" style={{ color: '#4A4A4A' }}>
+          <div className="flex items-center justify-center gap-5 sm:gap-6 md:gap-7 lg:gap-8 mt-2 sm:mt-3">
+            <div className="w-10 sm:w-12 md:w-14 lg:w-18 h-px" style={{ backgroundColor: '#D6B6A1' }}></div>
+            <span className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl uppercase tracking-wider font-montserrat" style={{ color: '#4A4A4A' }}>
               DEZEMBRO
             </span>
-            <div className="w-8 h-px" style={{ backgroundColor: '#D6B6A1' }}></div>
+            <div className="w-10 sm:w-12 md:w-14 lg:w-18 h-px" style={{ backgroundColor: '#D6B6A1' }}></div>
           </div>
 
           {/* Day circle */}
-          <div className="flex flex-col items-center space-y-2">
+          <div className="flex flex-col items-center space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-7 xl:space-y-8">
             {/* Saturday label */}
-            <p className="text-gray-600 text-xs uppercase tracking-widest font-montserrat" style={{ color: '#4A4A4A' }}>
+            <p className="text-gray-600 text-base sm:text-lg md:text-xl lg:text-2xl uppercase tracking-widest font-montserrat" style={{ color: '#4A4A4A' }}>
               SÁBADO
             </p>
 
             {/* Date circle */}
-            <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 flex items-center justify-center bg-white shadow-sm" style={{ borderColor: '#D6B6A1' }}>
-              <span className="text-4xl font-bold font-montserrat" style={{ color: '#4A4A4A' }}>
+            <div className="relative w-40 h-40 sm:w-44 sm:h-44 md:w-48 md:h-48 lg:w-52 lg:h-52 xl:w-56 xl:h-56 rounded-full border-2 flex items-center justify-center bg-white shadow-sm" style={{ borderColor: '#D6B6A1' }}>
+              <span className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] font-bold font-montserrat" style={{ color: '#4A4A4A' }}>
                 07
               </span>
             </div>
 
             {/* Year */}
-            <p className="text-gray-600 text-sm font-montserrat" style={{ color: '#4A4A4A' }}>
+            <p className="text-gray-600 text-lg sm:text-xl md:text-2xl lg:text-3xl font-montserrat" style={{ color: '#4A4A4A' }}>
               2024
             </p>
 
             {/* Time */}
-            <p className="text-gray-600 text-base font-montserrat mt-2" style={{ color: '#4A4A4A' }}>
+            <p className="text-gray-600 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat" style={{ color: '#4A4A4A' }}>
               16:30H
             </p>
           </div>
         </div>
 
         {/* Interactive icons section */}
-        <div className="flex justify-center items-center gap-4 sm:gap-6 mt-8 mb-8 flex-wrap px-4">
+        <div className="flex justify-center items-center gap-6 sm:gap-7 md:gap-8 lg:gap-10 xl:gap-12 flex-wrap px-4 sm:px-6 md:px-8">
           {/* Location icon */}
           <div className="flex flex-col items-center gap-2">
             <div className="rounded-full p-3 flex items-center justify-center" style={{ backgroundColor: '#F8E8E8' }}>
