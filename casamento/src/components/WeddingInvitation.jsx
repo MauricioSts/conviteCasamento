@@ -59,7 +59,7 @@ const WeddingInvitation = () => {
       <div className="relative z-10 flex flex-col items-center justify-start min-h-full px-3 sm:px-4 pt-8 sm:pt-12 md:pt-16 pb-4 sm:pb-6">
         {/* Blessing Text */}
         <motion.div
-          className="text-center mb-3 sm:mb-4 mt-2 sm:mt-4"
+          className="text-center mb-3 sm:mb-4 -mt-2 sm:-mt-1"
           variants={itemVariants}
         >
           <p className="text-wedding-gray text-xs sm:text-sm font-serif font-light tracking-wide px-2">

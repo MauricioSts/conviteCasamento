@@ -43,7 +43,7 @@ export default function ConviteCasamento() {
         </p>
 
         {/* Blessing */}
-        <p className="text-sm text-gray-600 text-center mt-2 font-montserrat">
+        <p className="text-sm text-gray-600 text-center -mt-2 font-montserrat">
           Com a bênção de Deus e de seus pais
         </p>
 
