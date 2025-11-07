@@ -25,12 +25,12 @@ export default function ConviteCasamento() {
   return (
     <div className="relative w-full max-w-sm mx-auto px-4 bg-white min-h-screen flex flex-col overflow-hidden" style={{ aspectRatio: '9/16' }}>
       {/* Top left floral decoration */}
-      <div className="absolute top-0 left-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-80 z-0 drop-shadow-md">
+      <div className="absolute top-0 left-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 opacity-80 z-0 drop-shadow-md">
         <img src={arranjo1} alt="Arranjo floral" className="w-full h-full object-contain" />
       </div>
 
       {/* Bottom right floral decoration - mirrored */}
-      <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-80 z-0 drop-shadow-md" style={{ transform: 'scaleX(-1)' }}>
+      <div className="absolute bottom-0 right-0 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 opacity-80 z-0 drop-shadow-md" style={{ transform: 'scaleX(-1)' }}>
         <img src={arranjo2} alt="Arranjo floral" className="w-full h-full object-contain" />
       </div>
 
@@ -44,7 +44,7 @@ export default function ConviteCasamento() {
 
         {/* Blessing */}
         <p className="text-sm text-gray-600 text-center mt-2 font-montserrat">
-          Com a bênção de Deus
+          Com a bênção de Deus e de seus pais
         </p>
 
         {/* Names section */}

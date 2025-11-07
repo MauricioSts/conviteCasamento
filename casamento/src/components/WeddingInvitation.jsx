@@ -36,22 +36,22 @@ const WeddingInvitation = () => {
       animate="visible"
     >
       {/* Top Floral Decoration - Top Right */}
-      <div className="absolute -top-8 -right-8 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 opacity-70 z-0">
+      <div className="absolute -top-8 -right-8 w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 opacity-70 z-0">
         <FloralDecoration imageType="arranjo1" />
       </div>
 
       {/* Top Floral Decoration - Top Left (inverted) */}
-      <div className="absolute -top-8 -left-8 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
+      <div className="absolute -top-8 -left-8 w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
         <FloralDecoration imageType="arranjo1" />
       </div>
 
       {/* Bottom Floral Decoration - Bottom Left */}
-      <div className="absolute -bottom-8 -left-8 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-70 z-0">
+      <div className="absolute -bottom-8 -left-8 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 opacity-70 z-0">
         <FloralDecoration imageType="arranjo2" />
       </div>
 
       {/* Bottom Floral Decoration - Bottom Right (inverted) */}
-      <div className="absolute -bottom-8 -right-8 w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
+      <div className="absolute -bottom-8 -right-8 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 opacity-70 z-0" style={{ transform: 'scaleX(-1)' }}>
         <FloralDecoration imageType="arranjo2" />
       </div>
 
