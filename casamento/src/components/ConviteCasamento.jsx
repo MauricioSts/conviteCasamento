@@ -9,12 +9,6 @@ const LocationIcon = () => (
   </svg>
 )
 
-const CheckIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z" fill="currentColor"/>
-  </svg>
-)
-
 const GiftIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M20 6H17.82C17.93 5.69 18 5.35 18 5C18 3.34 16.66 2 15 2C13.95 2 13.04 2.54 12.5 3.35L12 4.02L11.5 3.35C10.96 2.54 10.05 2 9 2C7.34 2 6 3.34 6 5C6 5.35 6.07 5.69 6.18 6H4C2.89 6 2.01 6.89 2.01 8L2 19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM15 4C15.55 4 16 4.45 16 5C16 5.55 15.55 6 15 6C14.45 6 14 5.55 14 5C14 4.45 14.45 4 15 4ZM9 4C9.55 4 10 4.45 10 5C10 5.55 9.55 6 9 6C8.45 6 8 5.55 8 5C8 4.45 8.45 4 9 4ZM20 19H4V13H20V19ZM20 11H4V8H20V11Z" fill="currentColor"/>
@@ -132,16 +126,6 @@ export default function ConviteCasamento() {
             </div>
             <p className="text-xs text-gray-600 font-medium text-center font-montserrat max-w-[90px]" style={{ color: '#4A4A4A' }}>
               Como Chegar
-            </p>
-          </div>
-
-          {/* Confirmation icon */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="rounded-full p-3 flex items-center justify-center" style={{ backgroundColor: '#F8E8E8' }}>
-              <CheckIcon className="text-rose-500" style={{ color: '#E6A6AD' }} />
-            </div>
-            <p className="text-xs text-gray-600 font-medium text-center font-montserrat max-w-[90px]" style={{ color: '#4A4A4A' }}>
-              Confirme sua presença
             </p>
           </div>
 

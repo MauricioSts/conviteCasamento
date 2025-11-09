@@ -30,7 +30,7 @@ const InteractiveIcon = ({ iconType, label, onClick }) => {
   
   return (
     <motion.button
-      className="flex flex-col items-center gap-3 focus:outline-none group"
+      className="flex flex-col items-center gap-3 focus:outline-none group flex-shrink-0"
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
@@ -39,16 +39,16 @@ const InteractiveIcon = ({ iconType, label, onClick }) => {
       transition={{ duration: 0.4 }}
     >
       <motion.div
-        className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-wedding-pink flex items-center justify-center shadow-sm transition-all duration-300 group-hover:bg-wedding-rose group-hover:shadow-md"
+        className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-wedding-pink flex items-center justify-center shadow-sm transition-all duration-300 group-hover:bg-wedding-rose group-hover:shadow-md flex-shrink-0"
       >
         <motion.div
-          className="text-wedding-gray group-hover:text-white transition-colors duration-300"
+          className="text-wedding-gray group-hover:text-white transition-colors duration-300 flex items-center justify-center"
           whileHover={{ scale: 1.1 }}
         >
           {IconComponent && <IconComponent />}
         </motion.div>
       </motion.div>
-      <p className="text-wedding-gray text-sm md:text-base lg:text-lg font-serif font-light text-center max-w-[100px] md:max-w-[120px] leading-tight">
+      <p className="text-wedding-gray text-sm md:text-base lg:text-lg font-serif font-light text-center w-[120px] md:w-[140px] leading-tight">
         {label}
       </p>
     </motion.button>

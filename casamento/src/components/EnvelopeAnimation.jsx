@@ -8,18 +8,37 @@ const EnvelopeAnimation = ({ onOpen }) => {
 
   return (
     <motion.div 
-      className="absolute inset-0 w-full h-full bg-white cursor-pointer overflow-hidden relative flex items-center justify-center max-w-full"
+      className="absolute inset-0 w-full h-full cursor-pointer overflow-hidden relative"
       onClick={handleClick}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.3 }}
+      style={{
+        margin: 0,
+        padding: 0
+      }}
     >
       <motion.img
         src={envelopeImage}
         alt="Envelope"
-        className="w-full h-full object-cover md:object-contain md:max-w-[600px] md:max-h-[90vh]"
+        className="absolute inset-0 w-full h-full object-cover"
         style={{ 
-          display: 'block'
+          display: 'block',
+          border: 'none',
+          outline: 'none',
+          objectFit: 'cover',
+          objectPosition: 'center',
+          width: '100vw',
+          height: '100vh',
+          minWidth: '100%',
+          minHeight: '100%',
+          margin: 0,
+          padding: 0,
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0
         }}
         initial={{ scale: 0.95 }}
         animate={{ scale: 1 }}
@@ -33,26 +52,6 @@ const EnvelopeAnimation = ({ onOpen }) => {
           filter: 'blur(40px)'
         }}
       />
-      
-      {/* Toque para abrir text - responsive */}
-      <motion.p
-        className="absolute bottom-12 sm:bottom-16 md:bottom-20 left-3 sm:left-4 md:left-8 text-black text-xs sm:text-sm md:text-base font-medium z-10"
-        style={{
-          fontFamily: 'Georgia, serif',
-          fontStyle: 'italic',
-          letterSpacing: '0.5px'
-        }}
-        animate={{ 
-          opacity: [0.8, 1, 0.8]
-        }}
-        transition={{ 
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        Toque para abrir
-      </motion.p>
     </motion.div>
   )
 }

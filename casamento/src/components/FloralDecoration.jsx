@@ -8,7 +8,8 @@ const FloralDecoration = ({ imageType = 'arranjo2' }) => {
     <img
       src={imageSrc}
       alt="Arranjo floral decorativo"
-      className="w-full h-full object-contain"
+      className="w-full h-full object-cover"
+      style={{ objectFit: 'cover' }}
     />
   )
 }

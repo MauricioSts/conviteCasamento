@@ -5,7 +5,7 @@ import InteractiveIcon from './InteractiveIcon'
 import HeartIcon from './HeartIcon'
 import MapModal from './MapModal'
 
-const WeddingInvitation = () => {
+const WeddingInvitation = ({ onOpenGiftList }) => {
   const [isMapOpen, setIsMapOpen] = useState(false)
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -63,7 +63,7 @@ const WeddingInvitation = () => {
           variants={itemVariants}
         >
           <p className="text-wedding-gray text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-light tracking-wide px-3 sm:px-4">
-            Com a bênção de Deus e de seus pais
+            Com a bênção de Deus, seus pais e filhos
           </p>
         </motion.div>
 
@@ -181,21 +181,16 @@ const WeddingInvitation = () => {
           className="text-center mb-6 sm:mb-7 md:mb-8 w-full"
           variants={itemVariants}
         >
-          <div className="flex justify-center items-center gap-5 sm:gap-6 md:gap-7 lg:gap-8 flex-nowrap px-3 sm:px-4">
+          <div className="flex justify-center items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14 flex-nowrap px-3 sm:px-4">
             <InteractiveIcon
               iconType="location"
               label="Como chegar"
               onClick={() => setIsMapOpen(true)}
             />
             <InteractiveIcon
-              iconType="check"
-              label="Confirme sua presença"
-              onClick={() => console.log('Confirmar presença')}
-            />
-            <InteractiveIcon
               iconType="gift"
               label="Lista de presentes"
-              onClick={() => console.log('Lista de presentes')}
+              onClick={onOpenGiftList}
             />
           </div>
         </motion.div>
