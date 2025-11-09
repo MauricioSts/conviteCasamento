@@ -192,9 +192,9 @@ const GiftListPage = ({ onClose }) => {
           <div className="flex items-center justify-center px-2 relative z-10" style={{ gap: 'clamp(2rem, 8vw, 5rem)' }}>
             {[100, 150, 200].map((value, index) => {
               const nubankLinks = {
-                100: 'https://nubank.com.br/cobrar/15h2oi/6910f834-4617-49e6-aca3-108b56a8579a',
-                150: 'https://nubank.com.br/cobrar/15h2oi/6910f896-7399-48d3-8885-6efdf3fa04de',
-                200: 'https://nubank.com.br/cobrar/15h2oi/6910f8a6-c98a-4e8c-860b-7893deeeb450'
+                100: 'https://nubank.com.br/cobrar/15h2oi/69110f99-b92e-4b1a-a431-1f6bf0af2f82',
+                150: 'https://nubank.com.br/cobrar/15h2oi/69110fab-f089-420d-97e6-80b389922740',
+                200: 'https://nubank.com.br/cobrar/15h2oi/69110fb8-0f96-4b9a-8c6f-d716e6d7b93f'
               }
               const nubankLink = nubankLinks[value] || null
               
@@ -295,9 +295,9 @@ const GiftListPage = ({ onClose }) => {
           <div className="flex items-center justify-center px-2 relative z-10" style={{ gap: 'clamp(2rem, 8vw, 5rem)' }}>
             {[300, 400, 500].map((value, index) => {
               const nubankLinks = {
-                300: 'https://nubank.com.br/cobrar/15h2oi/6910f8d1-1064-488d-b276-2fee2c5fdd2b',
-                400: 'https://nubank.com.br/cobrar/15h2oi/6910f8df-3b91-4141-ac6b-545130d48dd2',
-                500: 'https://nubank.com.br/cobrar/15h2oi/6910f8ec-8292-46ac-bcf2-4c432a6519dc'
+                300: 'https://nubank.com.br/cobrar/15h2oi/69110fc7-5f95-48cb-a14f-c23d61060553',
+                400: 'https://nubank.com.br/cobrar/15h2oi/69110fd3-acca-4478-8e10-cfc1d1219ec4',
+                500: 'https://nubank.com.br/cobrar/15h2oi/69110fde-bdbd-4d82-aa89-16cb7f91afde'
               }
               const nubankLink = nubankLinks[value] || null
               
