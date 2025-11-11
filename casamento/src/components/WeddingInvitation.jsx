@@ -171,7 +171,7 @@ const WeddingInvitation = ({ onOpenGiftList }) => {
             {/* Time - Below */}
             <div className="mt-4 sm:mt-5 md:mt-6">
               <p className="text-wedding-gray text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-light tracking-wide">
-                às 17 horas
+                às 17:30 horas
               </p>
             </div>
           </div>
@@ -182,7 +182,7 @@ const WeddingInvitation = ({ onOpenGiftList }) => {
           className="text-center mb-6 sm:mb-7 md:mb-8 w-full"
           variants={itemVariants}
         >
-          <div className="flex justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 flex-wrap px-2 sm:px-3 md:px-4">
+          <div className="flex justify-center items-start gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 flex-wrap px-2 sm:px-3 md:px-4">
             <InteractiveIcon
               iconType="location"
               label="Como chegar"

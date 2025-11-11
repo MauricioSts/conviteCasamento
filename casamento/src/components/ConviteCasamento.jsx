@@ -117,39 +117,39 @@ export default function ConviteCasamento() {
 
             {/* Time */}
             <p className="text-gray-600 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat" style={{ color: '#4A4A4A' }}>
-              16:30H
+              17:30H
             </p>
           </div>
         </div>
 
         {/* Interactive icons section */}
-        <div className="flex justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 flex-wrap px-2 sm:px-3 md:px-4 lg:px-6">
+        <div className="flex justify-center items-start gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 flex-wrap px-2 sm:px-3 md:px-4 lg:px-6">
           {/* Location icon - Cerimônia */}
           <div className="flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3 cursor-pointer active:opacity-70 transition-opacity touch-manipulation" onClick={() => setIsMapOpen(true)}>
-            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28" style={{ backgroundColor: '#F8E8E8' }}>
+            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 flex-shrink-0" style={{ backgroundColor: '#F8E8E8' }}>
               <LocationIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 text-rose-500" style={{ color: '#E6A6AD' }} />
             </div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[170px] leading-tight" style={{ color: '#4A4A4A' }}>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] xl:w-[170px] leading-tight min-h-[2.5em] flex items-center justify-center" style={{ color: '#4A4A4A' }}>
               Como Chegar
             </p>
           </div>
 
           {/* Location icon - Recepção */}
           <div className="flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3 cursor-pointer active:opacity-70 transition-opacity touch-manipulation" onClick={() => setIsReceptionMapOpen(true)}>
-            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28" style={{ backgroundColor: '#F8E8E8' }}>
+            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 flex-shrink-0" style={{ backgroundColor: '#F8E8E8' }}>
               <LocationIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 text-rose-500" style={{ color: '#E6A6AD' }} />
             </div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[170px] leading-tight" style={{ color: '#4A4A4A' }}>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] xl:w-[170px] leading-tight min-h-[2.5em] flex items-center justify-center" style={{ color: '#4A4A4A' }}>
               Local da recepção
             </p>
           </div>
 
           {/* Gift icon */}
           <div className="flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3 cursor-pointer active:opacity-70 transition-opacity touch-manipulation">
-            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28" style={{ backgroundColor: '#F8E8E8' }}>
+            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28 flex-shrink-0" style={{ backgroundColor: '#F8E8E8' }}>
               <GiftIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 text-rose-500" style={{ color: '#E6A6AD' }} />
             </div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[170px] leading-tight" style={{ color: '#4A4A4A' }}>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] xl:w-[170px] leading-tight min-h-[2.5em] flex items-center justify-center" style={{ color: '#4A4A4A' }}>
               Lista de presentes
             </p>
           </div>

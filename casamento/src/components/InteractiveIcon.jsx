@@ -30,7 +30,7 @@ const InteractiveIcon = ({ iconType, label, onClick }) => {
   
   return (
     <motion.button
-      className="flex flex-col items-center gap-2 sm:gap-3 focus:outline-none group flex-shrink-0 touch-manipulation"
+      className="flex flex-col items-center gap-2 sm:gap-3 focus:outline-none group flex-shrink-0 touch-manipulation self-start"
       onClick={onClick}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
@@ -48,7 +48,7 @@ const InteractiveIcon = ({ iconType, label, onClick }) => {
           {IconComponent && <IconComponent className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12" />}
         </motion.div>
       </motion.div>
-      <p className="text-wedding-gray text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-serif font-light text-center w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] xl:w-[170px] leading-tight">
+      <p className="text-wedding-gray text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-serif font-light text-center w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] xl:w-[170px] leading-tight min-h-[2.5em] flex items-center justify-center">
         {label}
       </p>
     </motion.button>
