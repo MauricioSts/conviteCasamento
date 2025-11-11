@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fila de Pacientes</title>
+  <style>
+    body{font-family:system-ui,Arial;max-width:760px;margin:32px auto;padding:0 16px}
+    h1{font-size:1.6rem;margin-bottom:0.2rem}
+    form{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+    input[type=text]{flex:1;padding:8px;border:1px solid #ccc;border-radius:6px}
+    button{padding:8px 12px;border-radius:8px;border:0;background:#0366d6;color:#fff;cursor:pointer}
+    button.secondary{background:#6c757d}
+    .painel{display:flex;gap:24px;align-items:flex-start}
+    pre{background:#f6f8fa;padding:12px;border-radius:8px;white-space:pre-wrap}
+    .resposta{min-width:200px}
+  </style>
+</head>
+<body>
+  <h1>Controle da fila de pacientes</h1>
+
+  <form>
+    <label for="inPaciente" class="visually-hidden">Nome do paciente</label>
+    <input type="text" id="inPaciente" name="inPaciente" placeholder="Nome do paciente" required />
+    <button type="submit" id="btAdicionar">Adicionar</button>
+    <button type="button" name="btUrgencia" id="btUrgencia" class="secondary">Urgência</button>
+    <button type="button" name="btAtender" id="btAtender" class="secondary">Atender</button>
+  </form>
+
+  <div class="painel">
+    <div class="resposta">
+      <strong>Próximo a ser atendido:</strong>
+      <div><span aria-live="polite"></span></div>
+    </div>
+
+    <div>
+      <strong>Lista de pacientes:</strong>
+      <pre aria-live="polite"></pre>
+    </div>
+  </div>
+
+  <script>
+    const frm = document.querySelector("form")
+    const respNome = document.querySelector("span")
+    const respLista = document.querySelector("pre")
+
+    const pacientes = []
+
+    frm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        if(!frm.checkValidity()){
+            alert("Informe o nome do paciente")
+            frm.inPaciente.focus()
+            return
+        }
+
+        const nome = frm.inPaciente.value.trim()
+        if(nome === "") return
+
+        pacientes.push(nome)
+
+        let lista = ""
+        for (let i = 0; i < pacientes.length; i++){
+            lista += `${i+1}. ${pacientes[i]}\n`
+        }
+
+        respLista.innerText = lista
+        frm.inPaciente.value = ""
+        frm.inPaciente.focus()
+    })
+
+
+    frm.btUrgencia.addEventListener("click", () => {
+        if(!frm.checkValidity()){
+            alert("Informe o nome do paciente")
+            frm.inPaciente.focus()
+            return
+        }
+
+        const nome = frm.inPaciente.value.trim()
+        if(nome === "") return
+
+        pacientes.unshift(nome)
+        let lista = ""
+
+        pacientes.forEach((paciente, i)=> (lista += `${i+1}. ${paciente}\n`))
+        respLista.innerText = lista
+        frm.inPaciente.value = ""
+        frm.inPaciente.focus()
+    })
+
+
+    frm.btAtender.addEventListener("click", () => {
+        if(pacientes.length == 0) {
+            alert("Não existem pacientes")
+            frm.inPaciente.focus()
+            return
+        }
+
+        const atender = pacientes.shift()
+        respNome.innerText = atender
+        let lista = ""
+        pacientes.forEach((paciente, i) => (lista += `${i+1}. ${paciente}\n`))
+        respLista.innerText = lista
+    })
+  </script>
+</body>
+</html>
