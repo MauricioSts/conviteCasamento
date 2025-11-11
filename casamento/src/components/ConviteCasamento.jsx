@@ -1,21 +1,26 @@
+import { useState } from 'react'
 import arranjo1 from '../arranjo1.png'
 import arranjo2 from '../arranjo2.png'
 import HeartIcon from './HeartIcon'
+import MapModal from './MapModal'
 
 // SVG Icons
-const LocationIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const LocationIcon = ({ className = "" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
   </svg>
 )
 
-const GiftIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+const GiftIcon = ({ className = "" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M20 6H17.82C17.93 5.69 18 5.35 18 5C18 3.34 16.66 2 15 2C13.95 2 13.04 2.54 12.5 3.35L12 4.02L11.5 3.35C10.96 2.54 10.05 2 9 2C7.34 2 6 3.34 6 5C6 5.35 6.07 5.69 6.18 6H4C2.89 6 2.01 6.89 2.01 8L2 19C2 20.11 2.89 21 4 21H20C21.11 21 22 20.11 22 19V8C22 6.89 21.11 6 20 6ZM15 4C15.55 4 16 4.45 16 5C16 5.55 15.55 6 15 6C14.45 6 14 5.55 14 5C14 4.45 14.45 4 15 4ZM9 4C9.55 4 10 4.45 10 5C10 5.55 9.55 6 9 6C8.45 6 8 5.55 8 5C8 4.45 8.45 4 9 4ZM20 19H4V13H20V19ZM20 11H4V8H20V11Z" fill="currentColor"/>
   </svg>
 )
 
 export default function ConviteCasamento() {
+  const [isMapOpen, setIsMapOpen] = useState(false)
+  const [isReceptionMapOpen, setIsReceptionMapOpen] = useState(false)
+  
   return (
     <div className="relative w-full max-w-sm mx-auto px-4 bg-white min-h-screen flex flex-col overflow-hidden" style={{ aspectRatio: '9/16' }}>
       {/* Top left floral decoration */}
@@ -118,29 +123,54 @@ export default function ConviteCasamento() {
         </div>
 
         {/* Interactive icons section */}
-        <div className="flex justify-center items-center gap-6 sm:gap-7 md:gap-8 lg:gap-10 xl:gap-12 flex-wrap px-4 sm:px-6 md:px-8">
-          {/* Location icon */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="rounded-full p-3 flex items-center justify-center" style={{ backgroundColor: '#F8E8E8' }}>
-              <LocationIcon className="text-rose-500" style={{ color: '#E6A6AD' }} />
+        <div className="flex justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 flex-wrap px-2 sm:px-3 md:px-4 lg:px-6">
+          {/* Location icon - Cerimônia */}
+          <div className="flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3 cursor-pointer active:opacity-70 transition-opacity touch-manipulation" onClick={() => setIsMapOpen(true)}>
+            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28" style={{ backgroundColor: '#F8E8E8' }}>
+              <LocationIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 text-rose-500" style={{ color: '#E6A6AD' }} />
             </div>
-            <p className="text-xs text-gray-600 font-medium text-center font-montserrat max-w-[90px]" style={{ color: '#4A4A4A' }}>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[170px] leading-tight" style={{ color: '#4A4A4A' }}>
               Como Chegar
             </p>
           </div>
 
-          {/* Gift icon */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="rounded-full p-3 flex items-center justify-center" style={{ backgroundColor: '#F8E8E8' }}>
-              <GiftIcon className="text-rose-500" style={{ color: '#E6A6AD' }} />
+          {/* Location icon - Recepção */}
+          <div className="flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3 cursor-pointer active:opacity-70 transition-opacity touch-manipulation" onClick={() => setIsReceptionMapOpen(true)}>
+            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28" style={{ backgroundColor: '#F8E8E8' }}>
+              <LocationIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 text-rose-500" style={{ color: '#E6A6AD' }} />
             </div>
-            <p className="text-xs text-gray-600 font-medium text-center font-montserrat max-w-[90px]" style={{ color: '#4A4A4A' }}>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[170px] leading-tight" style={{ color: '#4A4A4A' }}>
+              Local da recepção
+            </p>
+          </div>
+
+          {/* Gift icon */}
+          <div className="flex flex-col items-center gap-2 sm:gap-2.5 md:gap-3 cursor-pointer active:opacity-70 transition-opacity touch-manipulation">
+            <div className="rounded-full p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-28 xl:h-28" style={{ backgroundColor: '#F8E8E8' }}>
+              <GiftIcon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 xl:w-12 xl:h-12 text-rose-500" style={{ color: '#E6A6AD' }} />
+            </div>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-600 font-medium text-center font-montserrat max-w-[90px] sm:max-w-[110px] md:max-w-[130px] lg:max-w-[150px] xl:max-w-[170px] leading-tight" style={{ color: '#4A4A4A' }}>
               Lista de presentes
             </p>
           </div>
         </div>
       </div>
+
+      {/* Map Modal - Cerimônia */}
+      <MapModal 
+        isOpen={isMapOpen} 
+        onClose={() => setIsMapOpen(false)}
+        location="Paróquia Nossa Senhora da Conceição, Lajes, RN, Brasil"
+        title="Como chegar"
+      />
+      
+      {/* Map Modal - Recepção */}
+      <MapModal 
+        isOpen={isReceptionMapOpen} 
+        onClose={() => setIsReceptionMapOpen(false)}
+        location="R. Abilio Monteiro Soares - Lajes, RN, Brasil"
+        title="Residência de Junior de Delza"
+      />
     </div>
   )
 }
-

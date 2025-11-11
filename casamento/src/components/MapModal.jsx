@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect } from 'react'
 
-const MapModal = ({ isOpen, onClose }) => {
+const MapModal = ({ isOpen, onClose, location = 'Paróquia Nossa Senhora da Conceição, Lajes, RN, Brasil', title = 'Como chegar' }) => {
   // Prevenir scroll do body quando modal está aberto
   useEffect(() => {
     if (isOpen) {
@@ -16,12 +16,12 @@ const MapModal = ({ isOpen, onClose }) => {
 
   // URL do Google Maps com a localização
   // Usando formato de embed que funciona sem API key
-  const location = encodeURIComponent('Paróquia Nossa Senhora da Conceição, Lajes, RN, Brasil')
+  const encodedLocation = encodeURIComponent(location)
   // Formato de embed do Google Maps (funciona sem API key para uso básico)
-  const mapUrl = `https://www.google.com/maps?q=${location}&output=embed&hl=pt-BR`
+  const mapUrl = `https://www.google.com/maps?q=${encodedLocation}&output=embed&hl=pt-BR`
   
   // Link direto para abrir no Google Maps app
-  const directMapUrl = `https://www.google.com/maps/search/?api=1&query=${location}`
+  const directMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodedLocation}`
 
   return (
     <AnimatePresence>
@@ -50,10 +50,10 @@ const MapModal = ({ isOpen, onClose }) => {
               <div className="relative bg-gradient-to-r from-rose-100 to-pink-100 px-6 py-4 flex items-center justify-between border-b border-rose-200">
                 <div>
                   <h2 className="text-xl font-serif text-wedding-gray font-semibold">
-                    Como chegar
+                    {title}
                   </h2>
                   <p className="text-sm text-wedding-gray/70 font-serif mt-1">
-                    Paróquia Nossa Senhora da Conceição, Lajes - RN
+                    {location}
                   </p>
                 </div>
                 <motion.button
@@ -90,14 +90,14 @@ const MapModal = ({ isOpen, onClose }) => {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Mapa da Paróquia Nossa Senhora da Conceição"
+                  title={`Mapa - ${location}`}
                 />
               </div>
 
               {/* Footer with action buttons */}
               <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm px-6 py-4 flex items-center justify-between border-t border-rose-100">
                 <motion.a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${location}`}
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${encodedLocation}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-rose-500 text-white rounded-lg font-serif text-sm hover:bg-rose-600 transition-colors"
@@ -136,4 +136,3 @@ const MapModal = ({ isOpen, onClose }) => {
 }
 
 export default MapModal
-

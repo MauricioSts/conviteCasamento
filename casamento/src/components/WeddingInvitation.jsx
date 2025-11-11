@@ -7,6 +7,7 @@ import MapModal from './MapModal'
 
 const WeddingInvitation = ({ onOpenGiftList }) => {
   const [isMapOpen, setIsMapOpen] = useState(false)
+  const [isReceptionMapOpen, setIsReceptionMapOpen] = useState(false)
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -181,11 +182,16 @@ const WeddingInvitation = ({ onOpenGiftList }) => {
           className="text-center mb-6 sm:mb-7 md:mb-8 w-full"
           variants={itemVariants}
         >
-          <div className="flex justify-center items-center gap-8 sm:gap-10 md:gap-12 lg:gap-14 flex-nowrap px-3 sm:px-4">
+          <div className="flex justify-center items-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10 flex-wrap px-2 sm:px-3 md:px-4">
             <InteractiveIcon
               iconType="location"
               label="Como chegar"
               onClick={() => setIsMapOpen(true)}
+            />
+            <InteractiveIcon
+              iconType="location"
+              label="Local da recepção"
+              onClick={() => setIsReceptionMapOpen(true)}
             />
             <InteractiveIcon
               iconType="gift"
@@ -196,11 +202,23 @@ const WeddingInvitation = ({ onOpenGiftList }) => {
         </motion.div>
       </div>
 
-      {/* Map Modal */}
-      <MapModal isOpen={isMapOpen} onClose={() => setIsMapOpen(false)} />
+      {/* Map Modal - Cerimônia */}
+      <MapModal 
+        isOpen={isMapOpen} 
+        onClose={() => setIsMapOpen(false)}
+        location="Paróquia Nossa Senhora da Conceição, Lajes, RN, Brasil"
+        title="Como chegar"
+      />
+      
+      {/* Map Modal - Recepção */}
+      <MapModal 
+        isOpen={isReceptionMapOpen} 
+        onClose={() => setIsReceptionMapOpen(false)}
+        location="R. Abilio Monteiro Soares - Lajes, RN, Brasil"
+        title="Residência de Junior de Delza"
+      />
     </motion.div>
   )
 }
 
 export default WeddingInvitation
-
